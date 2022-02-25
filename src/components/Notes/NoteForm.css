@@ -1,0 +1,46 @@
+.note-form {
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 80%;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  border: 0px;
+  font: inherit;
+  padding: 0.1rem 0.25rem;
+  margin-bottom: 1rem;
+  min-height: 30px;
+}
+
+.form-control input:focus,
+.form-control input:hover{
+  outline: none;
+  border-bottom: 4px solid #202aad;
+}
+
+.form-control textarea {
+  border: 0px;
+  width: 100%;
+  min-height: 160px;
+  padding: 10px;
+  font-size:1.2rem;
+  resize: none;
+}
+
+.form-control textarea:focus,
+.form-control textarea:hover{
+  outline: 0px;
+  border-bottom: 4px solid #202aad;
+}
+
+.note-form__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
