@@ -51,7 +51,7 @@ const Notes = () => {
       "?auth=" + token + '&orderBy="userId"&equalTo="' + userId + '"';
 
     let url =
-      "https://remote-todo-list-default-rtdb.asia-southeast1.firebasedatabase.app/todos.json" +
+    process.env.React_App_Database_Url+".json" +
       queryParams;
 
     sendRequest(url, "GET", null, null, "SET_NOTES");
@@ -63,7 +63,7 @@ const Notes = () => {
       let userId = localStorage.getItem("userId");
 
       sendRequest(
-        "https://remote-todo-list-default-rtdb.asia-southeast1.firebasedatabase.app/todos.json?auth=" +
+        process.env.React_App_Database_Url+".json?auth=" +
           token,
         "POST",
         JSON.stringify({ ...note, userId: userId }),
@@ -78,7 +78,7 @@ const Notes = () => {
     (noteId) => {
       let token = localStorage.getItem("token");
       sendRequest(
-        `https://remote-todo-list-default-rtdb.asia-southeast1.firebasedatabase.app/todos/${noteId}.json?auth=` +
+        process.env.React_App_Database_Url+`/${noteId}.json?auth=` +
           token,
         "DELETE",
         null,
