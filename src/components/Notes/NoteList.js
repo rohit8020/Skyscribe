@@ -3,7 +3,7 @@ import React from "react";
 import "./NoteList.css";
 
 const noteList = (props) => {
-  console.log("RENDERING noteLIST");
+  // console.log("RENDERING noteLIST");
   return (
     <section className="notes">
       <h2>Loaded notes</h2>

@@ -7,7 +7,7 @@ import "./NoteForm.css";
 const NoteForm = React.memo((props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredDescription, setEnteredDescription] = useState("");
-  console.log("RENDERING note FORM");
+  // console.log("RENDERING note FORM");
 
   const submitHandler = (event) => {
     event.preventDefault();
